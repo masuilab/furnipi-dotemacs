@@ -4,14 +4,12 @@
 (setq-default tab-width 4 indent-tabs-mode nil) ;; disable tab
 (setq backup-inhibited t) ;; disable tmp file
 (define-key global-map [?¥] [?\\])
-(global-set-key "\C-x;" 'ns-toggle-fullscreen) ;; for Cocoa Emacs
 
 ;;ruby-mode
 (add-to-list 'auto-mode-alist '("\\.r[bu]$" . ruby-mode))
 (add-to-list 'auto-mode-alist '("\\.gemspec$" . ruby-mode))
 (add-to-list 'auto-mode-alist '("\\Rakefile$" . ruby-mode))
 (add-to-list 'auto-mode-alist '("\\Gemfile$" . ruby-mode))
-
 
 ;;haml-mode
 (require 'haml-mode)
@@ -58,13 +56,5 @@
 (setq ac-modes
       (append ac-modes
               (list 'sass-mode 'conf-mode)))
-
-(require 'yasnippet)
-(yas/global-mode 1)
-
-(require 'ajc-java-complete-config)
-(set 'ajc-tag-file "~/.emacs.d/ajc.tag")
-(add-hook 'java-mode-hook 'ajc-java-complete-mode)
-(add-hook 'find-file-hook 'ajc-4-jsp-find-file-hook)
 
 (put 'set-goal-column 'disabled nil)
