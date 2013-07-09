@@ -1,10 +1,10 @@
-.emacs for Mac
-==============
+.emacs for FurniPi
+==================
 
 Install emacs23
 ---------------
 
-    % brew install emacs
+    % sudo apt-get install emacs23-nox
 
 
 Setup
@@ -13,5 +13,5 @@ Setup
     % mkdir ~/.emacs.d
     % cd ~/.emacs.d
     % git init
-    % git remote add origin git://github.com/shokai/mac-dot-emacs.git
+    % git remote add origin https://github.com/shokai/furnipi-dotemacs.git
     % git pull origin master
